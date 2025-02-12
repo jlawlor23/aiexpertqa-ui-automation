@@ -1,0 +1,34 @@
+{
+  "name": "playwrightframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Regression": "npx playwright test",
+    "WebTests": "npx playwright test --grep @web",
+    "APITests": "npx playwright test --grep @API",
+    "ep1_ws2": "TEST_ENV=ws2 npx playwright test tests/logintest.spec.ts",
+    "qa": "BASE_URL=https://ws1.sso.xcloudiq.com/ws-login npx playwright test tests/logintest.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keshavjha06/PlaywrightFramework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keshavjha06/PlaywrightFramework/issues"
+  },
+  "homepage": "https://github.com/keshavjha06/PlaywrightFramework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.1",
+    "allure-playwright": "^3.1.0",
+    "ts-essentials": "^10.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "typescript": "^5.7.3"
+  }
+}
