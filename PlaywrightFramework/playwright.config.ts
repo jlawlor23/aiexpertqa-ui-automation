@@ -42,6 +42,17 @@ projects: [
             }
          }
 
+    },
+    {
+      name: 'Safari',
+      use: {
+            browserName: "webkit",
+            viewport: null,
+            launchOptions: {
+              args: ['--start-maximized']
+            }
+         }
+
     }
 
 

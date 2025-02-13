@@ -1,5 +1,6 @@
 import { expect, Page } from "@playwright/test";
 import { getConfig } from '../helpers/configReader';
+import * as allure from "allure-js-commons";
 
 export class LoginPage {
 
@@ -17,6 +18,11 @@ export class LoginPage {
 
     public async navigateToLogin() {
         await this.page.goto(this.config.APP_URL);
+        const timestamp = Date.now();
+        // Capture Screenshot
+        const screenshotBuffer = await this.page.screenshot();
+        // Attach to the Allue report as a unique screenshot if using parallel testing so png's will be unique
+        allure.attachment(`LoginScreenshot-${timestamp}`, screenshotBuffer, 'image/png'); 
     }
 
     public async fillLoginCreds() {
