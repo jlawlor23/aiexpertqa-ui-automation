@@ -16,11 +16,41 @@ export default defineConfig({
   reporter: [["line"], ["allure-playwright"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 use: {
+  headless: false, // set to false if you want to see the UI
+  screenshot: "only-on-failure",
+  fullyParallel: true,
+  trace: "on-first-retry" //capture trace when test fails
+},
+projects: [
+  {
+    name: 'Chromium',
+      use: {
+            browserName: "chromium",
+            viewport: null,
+            launchOptions: {
+              args: ['--start-maximized']
+            }
+          }
+    },
+    {
+      name: 'Firefox',
+      use: {
+            browserName: "firefox",
+            viewport: null,
+            launchOptions: {
+              args: ['--start-maximized']
+            }
+         }
 
-  //baseURL: process.env.BASE_URL || 'https://google.com',
-  baseURL: process.env.PLAYWRIGHT_ENV === 'ep1_ws2' ? 'https://prod.example.com' : 'https://staging.example.com',
+    }
+
+
+
+]
+
+
   
-  browserName: "chromium",
+  /* browserName: "chromium",
     headless: false,
     viewport: null,
         launchOptions: {
@@ -28,9 +58,9 @@ use: {
         },
     screenshot: "on",
     trace: "retain-on-failure", //off,on
-}
+} */
 
 
-})
+});
 
 
