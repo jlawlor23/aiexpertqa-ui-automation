@@ -5,22 +5,20 @@
   "main": "index.js",
   "scripts": {
     "Regression": "npx playwright test",
-    "WebTests": "npx playwright test --grep @web",
-    "APITests": "npx playwright test --grep @API",
     "ep1_ws2": "TEST_ENV=ws2 npx playwright test tests/logintest.spec.ts",
-    "qa": "BASE_URL=https://ws1.sso.xcloudiq.com/ws-login npx playwright test tests/logintest.spec.ts"
+    "labs_qa": "TEST_ENV=ws2 npx playwright test tests/logintest.spec.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keshavjha06/PlaywrightFramework.git"
+    "url": "git+https://github.com/jlawlor23/aiexpertqa-ui-automation.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/keshavjha06/PlaywrightFramework/issues"
+    "url": "https://github.com/jlawlor23/aiexpertqa-ui-automation/issues"
   },
-  "homepage": "https://github.com/keshavjha06/PlaywrightFramework#readme",
+  "homepage": "https://github.com/jlawlor23/aiexpertqa-ui-automation/blob/main/PlaywrightFramework/README.md",
   "devDependencies": {
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.1",

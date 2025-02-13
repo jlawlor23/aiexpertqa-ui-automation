@@ -17,7 +17,14 @@ AI Expert UI Test framework
 
 `git clone <repo name>>`<br/>
 `cd PlaywrightFramework`<br/>
-`npm run <script - from package.json>`<br/>
+`TEST_ENV=<env from env.config> npx playwright test`<br/>
+
+Example
+
+To run the Login spec file on EP1 WS2 Environment
+
+TEST_ENV=ep1_ws2 npx playwright test tests/logintest.spec.ts
+
 
 ## Screenshot:
 
