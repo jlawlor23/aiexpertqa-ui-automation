@@ -21,9 +21,9 @@ AI Expert UI Test framework
 
 Example
 
-To run the Login spec file on EP1 WS2 Environment
+To run the Login spec file on Labs QA Environment
 
-TEST_ENV=ep1_ws2 npx playwright test tests/logintest.spec.ts
+TEST_ENV=labs_qa npx playwright test tests/logintest.spec.ts
 
 
 ## Screenshot:
@@ -33,3 +33,8 @@ TEST_ENV=ep1_ws2 npx playwright test tests/logintest.spec.ts
 ## Reporting:
 
 - The framework produce Alure report. It resides in the allure-report folder.This reports gives the detailed information like screenshots,traces. On clicking these will display detailed descriptions of execution.
+
+allure generate ./allure-results -o ./allure-report
+
+allure open ./allure-report
+
